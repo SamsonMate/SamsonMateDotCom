@@ -21,7 +21,7 @@ useEffect(() => {
     const rotated = pointsRef.current.map((p) => rotateX(rotateY(p, angleRef.current), angleRef.current));
 
     // Draw connections
-    rotated.forEach((point, idx) => {
+    rotated.forEach((point) => {
         const [x1, y1] = project(point, width, height);
         point.connections.forEach((connIdx) => {
         const connected = rotated[connIdx];
