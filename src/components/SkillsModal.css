@@ -1,0 +1,68 @@
+/* Overlay background */
+.custom-overlay {
+    position: fixed;              /* Make overlay cover the whole viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;               /* Make sure it’s on top */
+    
+    /* Center modal using flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal box */
+.custom-modal {
+    background: rgb(0, 5, 10);
+    padding: 2rem;
+    padding-top: 0.5rem;
+    max-width: 50%;
+    width: 90%;                  /* Responsive width */
+    border-radius: 2rem;
+    position: relative;
+    outline: 8px ridge rgba(170, 248, 248, 0.6);
+    z-index: 1001;               /* On top of overlay */
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+}
+
+/* Modal body */
+.modal-body {
+    margin-top: 1rem;
+    font-size: x-large;
+}
+
+/* Modal footer */
+.modal-footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* Close (×) button */
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Launch button */
+.open-modal-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+.open-modal-btn:hover {
+    background-color: #f0f0f080;
+    cursor: pointer;
+}

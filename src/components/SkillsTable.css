@@ -1,0 +1,37 @@
+/* DESKTOP STYLES */
+.dynamic-table {
+    min-width: 700px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.5rem double #ffffff;
+}
+
+.dynamic-table th,
+.dynamic-table td {
+    padding: 8px;
+    text-align: center;
+    /* centers inline content horizontally */
+    vertical-align: middle;
+    /* centers content vertically */
+}
+
+.dynamic-table th {
+    border: 1px solid #ffffff
+}
+
+/* Vertical column dividers */
+.dynamic-table th:not(:last-child),
+.dynamic-table td:not(:last-child) {
+    border-right: 1px solid #ddd;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}

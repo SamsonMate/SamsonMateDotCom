@@ -2,6 +2,7 @@
   height: 100vh;
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 .flex-container {
@@ -12,11 +13,6 @@
 
 .bg-canvas {
   position: absolute;
-  margin-top: 30vh;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
 }
 
 .nav {
@@ -33,13 +29,13 @@
   list-style-type: none;
 }
 
-.linkClass {
+.navButton {
   font-size: x-large;
   color: white;
   transition: font-size 0.2s, margin 0.2s;
 }
 
-.linkClass:hover, .linkClass:active {
+.navButton:hover, .navButton:active {
   font-size: xx-large;
   cursor: pointer;
 }
@@ -48,9 +44,15 @@
   width: 71vw;
   padding-right: 2vw;
   z-index: 1;
+  font-size: larger;
 }
 
-@media (max-width: 768px) {
+.content h1 {
+  text-decoration: underline;
+  margin-bottom: 1vh;
+}
+
+@media (max-width: 768px) { /* Mobile styles (Change to height/width ratio)*/
   .flex-container {
     flex-direction: column;
     height: 100vh;
@@ -69,7 +71,7 @@
     list-style: none;
   }
 
-  .linkClass {
+  .navButton {
     flex: 0 1 auto;                /* ✅ Items shrink if needed */
     color: white;
     padding: 0.5rem 1rem;
@@ -79,8 +81,8 @@
     transition: font-size 0.2s, padding 0.2s;
   }
 
-  .linkClass:hover,
-  .linkClass:active {
+  .navButton:hover,
+  .navButton:active {
     font-size: 1.5rem;
     padding: 0.75rem 1.25rem;
     cursor: pointer;
