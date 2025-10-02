@@ -1,7 +1,7 @@
 import './App.css'
 import WireframeBG from './components/WireframeIcosahedron'
 import SkillsTable from './components/SkillsTable'
-import { languages, frontEndSkills, backEndSkills, networkingSkills, interpersonalSkills } from './utils/skills'
+import { languages, libraries, tools, other } from './utils/skills'
 
 function App() {
   return (
@@ -28,13 +28,12 @@ function App() {
           and a place to centralize all my work.
         </p>
 
-        <h1 id="skills">Skills (CURRENTLY JUST AN AI TEMPLATE)</h1>
+        <h1 id="skills">Skills (WIP)</h1>
         <SkillsTable 
         languages={languages}
-        frontEndSkills={frontEndSkills}
-        backEndSkills={backEndSkills}
-        networkingSkills={networkingSkills}
-        interpersonalSkills={interpersonalSkills}
+        libraries={libraries}
+        tools={tools}
+        other={other}
         ></SkillsTable>
 
         <h1 id="projects">Projects</h1>
@@ -46,7 +45,7 @@ function App() {
         <h1 id="contact">Contact Me</h1> {/* Thinking I'll make a cool thing for these */}
         <ul>
           <li><a href="https://github.com/SamsonMate">GitHub</a></li>
-          <li>samsonpmate@gmail.com -&gt; <a href="mailto:samsonpmate%40gmail.com?subject=&body=Hello,\n\n">Click me to send an Email!</a></li>
+          <li><a href="mailto:samsonpmate%40gmail.com?subject=&body=Hello,">samsonpmate@gmail.com</a></li>
         </ul>
       </section>
     </div>
